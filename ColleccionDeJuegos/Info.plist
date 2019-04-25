@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>La aplicacion de colleccion de juegos necesita acceso a tu camara</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>La aplicacion de colleccion de juegos necesita acceso a tus imagenes</string>
 	<key>CFBundleExecutable</key>

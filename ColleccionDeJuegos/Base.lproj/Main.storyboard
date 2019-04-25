@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="oP1-Y1-XcV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zzf-LH-hfu">
                             <connections>
-                                <segue destination="a9q-wM-0mF" kind="show" id="WzI-8J-wbT"/>
+                                <segue destination="a9q-wM-0mF" kind="show" identifier="juegoSegue" id="WzI-8J-wbT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -71,12 +71,21 @@
                                     <action selector="agregarTapped:" destination="a9q-wM-0mF" eventType="touchUpInside" id="SBG-QM-NOb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-2a-caZ">
+                                <rect key="frame" x="160" y="384" width="55" height="30"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="a9q-wM-0mF" eventType="touchUpInside" id="sL9-lx-3yJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Auz-aD-Scg" firstAttribute="leading" secondItem="2Wd-vD-634" secondAttribute="leading" constant="67" id="1Ip-Ce-n8b"/>
                             <constraint firstItem="SU7-9S-fCe" firstAttribute="centerX" secondItem="8ym-4S-YER" secondAttribute="centerX" id="3WC-CG-7WB"/>
                             <constraint firstItem="A6Y-bx-0bC" firstAttribute="top" secondItem="Auz-aD-Scg" secondAttribute="bottom" constant="21" id="4Tq-bp-sqK"/>
+                            <constraint firstItem="ojQ-2a-caZ" firstAttribute="top" secondItem="A6Y-bx-0bC" secondAttribute="bottom" constant="36" id="9QR-qk-d3J"/>
+                            <constraint firstItem="ojQ-2a-caZ" firstAttribute="centerX" secondItem="8ym-4S-YER" secondAttribute="centerX" id="C0R-zJ-ES6"/>
                             <constraint firstItem="Auz-aD-Scg" firstAttribute="centerX" secondItem="SU7-9S-fCe" secondAttribute="centerX" id="DqA-Ps-wcC"/>
                             <constraint firstItem="A6Y-bx-0bC" firstAttribute="centerX" secondItem="8ym-4S-YER" secondAttribute="centerX" id="GOG-Sm-x5q"/>
                             <constraint firstItem="SU7-9S-fCe" firstAttribute="leading" secondItem="2Wd-vD-634" secondAttribute="leading" constant="47" id="SbW-cx-SSJ"/>
@@ -90,7 +99,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="oGw-6A-Tcb">
                                 <connections>
-                                    <action selector="camaraTapped:" destination="a9q-wM-0mF" id="JmJ-1G-RZi"/>
+                                    <action selector="camaraTapped:" destination="a9q-wM-0mF" id="e2A-Fh-C1H"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Fotos" id="nHe-U7-nCT">
@@ -102,6 +111,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="SU7-9S-fCe" id="iXo-I3-aTw"/>
+                        <outlet property="agregarActualizarBoton" destination="A6Y-bx-0bC" id="jyP-Hh-oK7"/>
+                        <outlet property="eliminarBoton" destination="ojQ-2a-caZ" id="NJm-LN-bdJ"/>
                         <outlet property="tituloTextField" destination="Auz-aD-Scg" id="B9q-od-g00"/>
                     </connections>
                 </viewController>
